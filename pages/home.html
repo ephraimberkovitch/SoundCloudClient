@@ -1,0 +1,11 @@
+    <div>
+        <h1>Home Page</h1>
+        <input type="text" ng-model="searchString"/>
+        <a href ng-click="search()">Go</a>
+        <br/>
+        <ul ng-repeat="result in results">
+            <li><a href="#play/{{ result.title | urlencode }}/{{ result.image | urlencode }}">{{ result.title }}</a></li>
+        </ul>
+
+        <i disabled="{{ next_href==null }}" class="fa fa-step-forward" ng-click="next()"></i>
+    </div>
